@@ -1,0 +1,21 @@
+@import '~/assets/styles/_utility';
+
+.top {
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+
+  &__icon {
+    width: 100%;
+    max-width: 25em;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-size: 7.1rem;
+    @include media(sp) {
+      font-size: 2.5rem;
+    }
+  }
+}
