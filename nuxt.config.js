@@ -1,6 +1,16 @@
 const ampify = require('./src/plugins/ampify')
 
+const routerBase =
+  process.env.DEPLOY_ENV === 'GH_PAGES'
+    ? {
+        router: {
+          base: '/<repository-name>/'
+        }
+      }
+    : {}
+
 export default {
+  ...routerBase,
   mode: 'universal',
   srcDir: './src',
   /*
