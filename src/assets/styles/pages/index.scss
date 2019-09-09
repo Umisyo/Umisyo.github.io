@@ -1,7 +1,7 @@
 @import '~/assets/styles/_utility';
 
 .top {
-  max-width: 50%;
+  max-width: 70%;
   margin: 0 auto;
   text-align: center;
 
@@ -10,8 +10,8 @@
     width: 25em;
     height: 25em;
     @include media(sp) {
-      width: 10rem;
-      height: 10rem;
+      width: 10em;
+      height: 10em;
     }
     border-radius: 50%;
   }
@@ -20,6 +20,29 @@
     font-size: 7.1rem;
     @include media(sp) {
       font-size: 2.5rem;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    amp-img,
+    img {
+      width: 10em;
+      height: 10em;
+      @include media(sp) {
+        width: 4em;
+        height: 4em;
+      }
+    }
+
+    &-link {
+      &-instagram {
+        img,
+        amp-img {
+          background: #ecf0f1;
+        }
+      }
     }
   }
 }
