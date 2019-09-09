@@ -7,11 +7,11 @@
 @each $key, $value in $breakpoints {
   @include media($key) {
     .util--#{$key}-fwn {
-      font-weight: normal !important;
+      font-weight: normal;
     }
 
     .util--#{$key}-fwb {
-      font-weight: bold !important;
+      font-weight: bold;
     }
   }
 }
@@ -26,35 +26,35 @@ $spaceClassFlg: true !default;
     @include media($key) {
       @for $i from 0 through $endValue {
         .util--#{$key}-m#{$i * 5} {
-          margin: 5px * $i !important;
+          margin: 5px * $i;
         }
         .util--#{$key}-mt#{$i * 5} {
-          margin-top: 5px * $i !important;
+          margin-top: 5px * $i;
         }
         .util--#{$key}-mr#{$i * 5} {
-          margin-right: 5px * $i !important;
+          margin-right: 5px * $i;
         }
         .util--#{$key}-mb#{$i * 5} {
-          margin-bottom: 5px * $i !important;
+          margin-bottom: 5px * $i;
         }
         .util--#{$key}-ml#{$i * 5} {
-          margin-left: 5px * $i !important;
+          margin-left: 5px * $i;
         }
 
         .util--#{$key}-p#{$i * 5} {
-          padding: 5px * $i !important;
+          padding: 5px * $i;
         }
         .util--#{$key}-pt#{$i * 5} {
-          padding-top: 5px * $i !important;
+          padding-top: 5px * $i;
         }
         .util--#{$key}-pr#{$i * 5} {
-          padding-right: 5px * $i !important;
+          padding-right: 5px * $i;
         }
         .util--#{$key}-pb#{$i * 5} {
-          padding-bottom: 5px * $i !important;
+          padding-bottom: 5px * $i;
         }
         .util--#{$key}-pl#{$i * 5} {
-          padding-left: 5px * $i !important;
+          padding-left: 5px * $i;
         }
       }
     }
