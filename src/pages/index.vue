@@ -3,5 +3,3 @@
     img.top__icon(src="~/assets/images/Umisyo.jpg" loading="lazy" decoding="async" alt="Souta Kusunoki")
     h1.top__name Souta Kusunoki
 </template>
-
-<style lang="scss" src="./style.scss" />
