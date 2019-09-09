@@ -61,7 +61,12 @@ export default {
     extend(config, ctx) {}
   },
   hooks: {
-    'render:route': (url, page) => {
+    // This hook is called before generatic static html files for SPA mode
+    'generate:page': page => {
+      page.html = modifyHtml(page.html)
+    },
+    // This hook is called before rendering the html to the browser
+    'render:route': (url, page, { req, res }) => {
       page.html = modifyHtml(page.html)
     }
   }
