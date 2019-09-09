@@ -1,72 +1,14 @@
-<template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        SoutaKusunoki
-      </h1>
-      <h2 class="subtitle">
-        Souta Kusunoki&#39;s Portfolio
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+  div.top
+    img.top__icon(src="~/assets/images/icon.webp" alt="Souta Kusunoki")
+    h1.top__name Souta Kusunoki
+    div.top__social
+      a.top__social-link(href="http://github.com/Umisyo")
+        img(src="~/assets/images/github-icon.webp")
+      a.top__social-link-instagram(href="http://instagram.com/ihcamonoihS")
+        img(src="~/assets/images/instagram-icon.webp")
+      a.top__social-link(href="http://twitter.com/ihcamonoihS")
+        img(src="~/assets/images/twitter-icon.webp")
+      a.top__social-link(href="http://facebook.com/ihcamonoihS")
+        img(src="~/assets/images/facebook-icon.webp")
 </template>
-
-<script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
-</script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
