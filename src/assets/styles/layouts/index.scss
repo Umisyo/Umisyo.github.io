@@ -1,5 +1,8 @@
 @import '~/assets/styles/_utility';
 @import '~/assets/styles/_variables';
+.layout {
+  height: 100vh;
+}
 
 .header {
   display: flex;

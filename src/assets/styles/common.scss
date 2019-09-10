@@ -16,6 +16,7 @@ html {
 body {
   letter-spacing: 0.05em;
   line-height: 1.88;
+  background: -o-linear-gradient(225deg, #e4a972, #9941d8) fixed;
   background: linear-gradient(-135deg, #e4a972, #9941d8) fixed;
 
   @include media(sp) {
@@ -45,4 +46,4 @@ img {
 
 @import './pages/';
 @import './layouts/';
-@import './pages/About/'
+@import './pages/About/';

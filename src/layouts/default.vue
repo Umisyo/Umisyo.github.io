@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  div.layout
     header.header
       nuxt-link.header__link(to="/")
         button.header__link-button Top
