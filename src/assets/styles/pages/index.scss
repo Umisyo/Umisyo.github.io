@@ -9,11 +9,11 @@
   img {
     margin-left: auto;
     margin-right: auto;
-    width: 25em;
-    height: 25em;
-    @include media(sp) {
-      width: 10em;
-      height: 10em;
+    width: 10em;
+    height: 10em;
+    @include media(pc) {
+      width: 25em;
+      height: 25em;
     }
     border-radius: 50%;
   }
@@ -30,11 +30,11 @@
     justify-content: space-between;
     amp-img,
     img {
-      width: 10em;
-      height: 10em;
-      @include media(sp) {
-        width: 4em;
-        height: 4em;
+      width: 4em;
+      height: 4em;
+      @include media(pc) {
+        width: 10em;
+        height: 10em;
       }
     }
 
