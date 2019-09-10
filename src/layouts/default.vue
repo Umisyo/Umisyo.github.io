@@ -10,4 +10,7 @@
       nuxt-link.header__link(to="/")
         button.header__link-button Works
     nuxt
+    footer.footer
+      ul.footer__contacts Contacts
+        li.footer__contacts-content mail: Kusunokisouta@gmail.com
 </template>
