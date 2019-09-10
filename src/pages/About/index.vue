@@ -1,6 +1,6 @@
 <template lang="pug">
     div.about
-        img.about__face(src="~/assets/images/about/face.webp" alt="face" width="5em" height="5em")
+        img.about__face(src="~/assets/images/about/face.webp" alt="face" decoding="async" loading="lazy")
         h2.about__title Souta Kusunoki
         h3.about__aka a.k.a そーとく from Saitama, Japan・kusunokisouta@gmail.com
         p.about-content 2000/10/10

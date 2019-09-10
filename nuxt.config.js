@@ -27,7 +27,10 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{rel: 'canonical', href: '/'},{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'canonical', href: '/' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -61,11 +64,15 @@ export default {
   hooks: {
     // This hook is called before saving the html to flat file
     'generate:page': page => {
-      page.html = ampify(page.html)
+      if (page.route === '/') {
+        page.html = ampify(page.html)
+      }
     },
     // This hook is called before serving the html to the browser
     'render:route': (url, page, { req, res }) => {
-      page.html = ampify(page.html)
+      if (page.route === '/') {
+        page.html = ampify(page.html)
+      }
     }
   }
 }
