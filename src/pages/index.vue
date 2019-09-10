@@ -1,6 +1,6 @@
 <template lang="pug">
   div.top
-    img.top__icon(src="~/assets/images/icon.webp" width="10rem" height="10rem")
+    img.top__icon(src="~/assets/images/icon.webp" width="10em" height="10em")
     h1.top__name Souta Kusunoki
     div.top__social
       a.top__social-link(href="http://github.com/Umisyo")
