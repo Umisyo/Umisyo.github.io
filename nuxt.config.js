@@ -30,7 +30,8 @@ export default {
     ],
     link: [
       { rel: 'canonical', href: '/' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'amphtml', href:'./amp'}
     ]
   },
   /*
@@ -66,14 +67,14 @@ export default {
     // This hook is called before saving the html to flat file
     'generate:page': page => {
       page.html = createAsciiArt(page.html)
-      if (page.route === '/') {
+      if (page.route === '/amp') {
         page.html = ampify(page.html)
       }
     },
     // This hook is called before serving the html to the browser
     'render:route': (url, page, { req, res }) => {
       page.html = createAsciiArt(page.html)
-      if (page.route === '/') {
+      if (page.route === '/amp') {
         page.html = ampify(page.html)
       }
     }
