@@ -1,0 +1,10 @@
+@import './Card/';
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-right: 10%;
+  padding-left: 10%;
+  box-sizing: border-box;
+}
