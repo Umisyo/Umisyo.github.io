@@ -1,4 +1,5 @@
-const ampify = require('./src/plugins/ampify')
+import ampify from './src/plugins/ampify'
+import createAsciiArt  from './src/plugins/createAsciiArt'
 
 const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES'
@@ -64,12 +65,14 @@ export default {
   hooks: {
     // This hook is called before saving the html to flat file
     'generate:page': page => {
+      page.html = createAsciiArt(page.html)
       if (page.route === '/') {
         page.html = ampify(page.html)
       }
     },
     // This hook is called before serving the html to the browser
     'render:route': (url, page, { req, res }) => {
+      page.html = createAsciiArt(page.html)
       if (page.route === '/') {
         page.html = ampify(page.html)
       }
