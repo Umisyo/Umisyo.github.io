@@ -1,5 +1,5 @@
 import ampify from './src/plugins/ampify'
-import createAsciiArt  from './src/plugins/createAsciiArt'
+import createAsciiArt from './src/plugins/createAsciiArt'
 
 const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES'
@@ -28,16 +28,22 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content:
+          '高専を中退して株式会社ゆめみでフロントエンドエンジニアとして働いています。'
       },
       { property: 'og:title', content: 'Souta Kusunoki' },
-      { property: 'og:description', content: 'Portfolio of Souta Kusunoki' },
-      { name: 'og:twitter:card', content: 'summary' },
+      {
+        property: 'og:description',
+        content:
+          '高専を中退して株式会社ゆめみでフロントエンドエンジニアとして働いています。'
+      },
       {
         property: 'og:image',
         content:
           'https://res.cloudinary.com/umisyo/image/upload/f_auto/v1568269864/Portfolio/icon_zmntgo.webp'
-      }
+      },
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:site', content: '@ihcamonoihS' }
     ],
     link: [
       { rel: 'canonical', href: '/' },
