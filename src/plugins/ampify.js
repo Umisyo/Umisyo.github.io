@@ -5,7 +5,10 @@ const ampBoilerplate =
 
 module.exports = html => {
   // Add ⚡ to html tag
-  html = html.replace(/<html/gi, '<html ⚡')
+  html = html.replace(
+    /<html/gm,
+    '<html ⚡'
+  )
 
   // Combine css into single tag
   let styleConcat = ''
