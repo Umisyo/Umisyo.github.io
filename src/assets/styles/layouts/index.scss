@@ -70,12 +70,11 @@
   bottom: 0;
   width: 100%;
   margin-top: auto;
-  border-top: 1px solid;
+  color: #ecf0f1;
   background-color: #2c3e50;
 
   &__contacts {
     list-style: none;
-    color: #ecf0f1;
     font-size: 1.5rem;
     @include media(sp) {
       font-size: 1rem;
