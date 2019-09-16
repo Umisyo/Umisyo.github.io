@@ -19,6 +19,9 @@ export default {
    */
   head: {
     title: process.env.npm_package_name || '',
+    htmlAttrs: {
+      lang: 'ja'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -26,12 +29,20 @@ export default {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
+      },
+      { property: 'og:title', content: 'Souta Kusunoki' },
+      { property: 'og:description', content: 'Portfolio of Souta Kusunoki' },
+      { name: 'og:twitter:card', content: 'summary' },
+      {
+        property: 'og:image',
+        content:
+          'https://res.cloudinary.com/umisyo/image/upload/f_auto/v1568269864/Portfolio/icon_zmntgo.webp'
       }
     ],
     link: [
       { rel: 'canonical', href: '/' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'amphtml', href:'./amp'}
+      { rel: 'amphtml', href: './amp' }
     ]
   },
   /*
