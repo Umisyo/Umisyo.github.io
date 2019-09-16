@@ -11,6 +11,7 @@
         button.header__link-button Works
     nuxt
     footer.footer
-      ul.footer__contacts Contacts
+      ul.footer__contacts
         li.footer__contacts-content mail: Kusunokisouta@gmail.com
+        li.footer__contacts-content twitter: @ihcamonoihS
 </template>
