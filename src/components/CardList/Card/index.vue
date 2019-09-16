@@ -1,6 +1,6 @@
 <template lang="pug">
     section.card
-        img.card__img(:src="imgSrc")
+        img.card__img(:src="imgSrc" :alt="title")
         h3.card__title {{ title }}
         p.card__text {{ text }}
 </template>
