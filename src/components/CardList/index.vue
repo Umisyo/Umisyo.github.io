@@ -5,14 +5,14 @@
 
 <script>
 export default {
-    components: {
-        Card: () => import('~/components/CardList/Card')
-    },
-    props: {
-        content_list: {
-            type: Array,
-            default: () => []
-        }
+  components: {
+    Card: () => import("~/components/CardList/Card")
+  },
+  props: {
+    content_list: {
+      type: Array,
+      default: () => []
     }
-}
+  }
+};
 </script>

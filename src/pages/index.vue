@@ -11,4 +11,6 @@
         img(src="https://res.cloudinary.com/umisyo/image/upload/f_auto/v1568269865/Portfolio/twitter-icon_iofxq1.webp" width="40" height="40" alt="Twitter")
       a.top__social-link(href="http://facebook.com/ihcamonoihS")
         img(src="https://res.cloudinary.com/umisyo/image/upload/f_auto/v1568269864/Portfolio/facebook-icon_dwhvaj.webp" width="40" height="40" alt="Facebook")
+      a.top__social-link(href="http://note.mu/ihcamonoihS")
+        img(src="https://res.cloudinary.com/umisyo/image/upload/f_auto/v1568635725/Portfolio/profile_05b96306d48ff11526313b13c882b27e_iwjsob.jpg" width="40" height="40" alt="Note")
 </template>

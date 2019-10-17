@@ -29,7 +29,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          '高専を中退して株式会社ゆめみでフロントエンドエンジニアとして働いています。'
+          '楠 颯太といいます。高専を中退して株式会社ゆめみでフロントエンドエンジニアとして働いています。'
       },
       { property: 'og:title', content: 'Souta Kusunoki' },
       {
@@ -40,15 +40,13 @@ export default {
       {
         property: 'og:image',
         content:
-          'https://res.cloudinary.com/umisyo/image/upload/f_auto/v1568269864/Portfolio/icon_zmntgo.webp'
+          'https://rhttps://es.cloudinary.com/umisyo/image/upload/f_auto/v1568269864/Portfolio/icon_zmntgo.webp'
       },
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: '@ihcamonoihS' }
     ],
     link: [
-      { rel: 'canonical', href: '/' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'amphtml', href: './amp' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   /*
@@ -78,6 +76,8 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    minifyCSS: true,
+    minifyJS: true,
     extend(config, ctx) {}
   },
   hooks: {
@@ -87,6 +87,16 @@ export default {
       if (page.route === '/amp') {
         page.html = ampify(page.html)
       }
+      if (page.route === '/') {
+        page.html = page.html.replace(
+          '</title>',
+          '</title><link rel="amphtml" href="http://kusunokisouta.com/amp">'
+        )
+      }
+      page.html = page.html.replace(
+        '</title>',
+        `</title><link rel="canonical" href="https://kusunokisouta.com${page.route}">`
+      )
     },
     // This hook is called before serving the html to the browser
     'render:route': (url, page, { req, res }) => {
@@ -94,6 +104,16 @@ export default {
       if (page.route === '/amp') {
         page.html = ampify(page.html)
       }
+      if (page.route === '/') {
+        page.html = page.html.replace(
+          '</title>',
+          '</title><link rel="amphtml" href="http://kusunokisouta.com/amp">'
+        )
+      }
+      page.html = page.html.replace(
+        '</title>',
+        `</title><link rel="canonical" href="https://kusunokisouta.com${page.route}>"`
+      )
     }
   }
 }

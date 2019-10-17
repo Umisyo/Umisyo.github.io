@@ -41,8 +41,6 @@ module.exports = html => {
     }
   )
 
-  html = html.replace('<link rel="amphtml" href="/">', '')
-
   // Replace img tags with amp-img
   html = html.replace(/<img([^>]*)>/gi, (match, sub) => {
     return `<amp-img ${sub} layout="responsive"></amp-img>`
